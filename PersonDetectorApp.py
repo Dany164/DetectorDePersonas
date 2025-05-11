@@ -33,7 +33,7 @@ class PersonDetectorApp:
         self.processed_image_path = None
         
         # Variables de configuración
-        self.api_key = "gRjtKzAcootXzZo9s0nu"  # IMPORTANTE: Debes establecer tu API key de Roboflow aquí
+        self.api_key = ""  # IMPORTANTE: Debes establecer tu API key de Roboflow aquí
         self.confidence_threshold = 40  # Umbral de confianza para detecciones
         
         # Inicializar Roboflow si la API key está configurada
@@ -59,7 +59,7 @@ class PersonDetectorApp:
             
             # IMPORTANTE: Cargar un modelo preentrenado para detección de personas
             # El modelo "coco" es ampliamente usado y detecta personas y otros objetos comunes
-            self.model = self.rf.workspace().project("my-first-project-sz6xo").version(1).model
+            self.model = self.rf.workspace().project("").version(1).model
             
             print("Modelo cargado correctamente")
         except Exception as e:
